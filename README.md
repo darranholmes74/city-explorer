@@ -3,14 +3,16 @@
 
 ## Overview
 <!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
-T
-This application will rending 
+This application will enable a user to enter a city name and the latitude, longitude, and a map will display on the page.
+
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+They would need to copy the could but get there own access key.
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+In order to build the website I will need JS, CSS, HTML, React, React-Router-DOM, Bootstrap, and Axious
 
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
@@ -19,3 +21,13 @@ This application will rending
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+Name of feature: City Explore
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 5:25pm
+
+Finish time: _____
+
+Actual time needed to complete: _____
