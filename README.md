@@ -22,12 +22,14 @@ In order to build the website I will need JS, CSS, HTML, React, React-Router-DOM
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
 
+
+
 Name of feature: City Explore
 
 Estimate of time needed to complete: 3 hours
 
 Start time: 5:25pm
 
-Finish time: _____
+Finish time: 7:30pm different day
 
-Actual time needed to complete: _____
+Actual time needed to complete: 9-10 hours
