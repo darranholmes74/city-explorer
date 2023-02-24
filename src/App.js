@@ -11,18 +11,20 @@ import {
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Weather from "./Weather"
 
 
 const ACCESS_TOKEN = process.env.REACT_APP_LOCATION_ACCESS_TOKEN;
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       searchInput: '',
       results: [],
+      weatherData: [],
       error: null
+      
     }
   }
   handleSearch = async (e) => {
@@ -33,15 +35,29 @@ class App extends React.Component {
         // }
         console.log(url);
       let response = await axios.get(url);
-
-      this.setState({
-        results: response.data
-      });
+      this.setState({ results: response.data});
+      this.getWeather();
     } catch (e) {
       console.log(e);
       this.setState({ error: e });
     }
   }
+  
+  //    () =>
+  // this.getWeather(this.state.handleData.display_name));
+getWeather = async () => {
+  
+  let request = {
+    url: `http://localhost:3001/weather?city_name=${this.state.searchInput}`,
+    method: 'GET'
+  } 
+  axios(request)
+      .then(response => {
+        this.setState({weatherData: response.data})
+        console.log(response.data);
+      });
+}
+   
 
   // async is just syntactic sugar, it just delays code like a callback
   handleInput = async (e) => {
@@ -51,6 +67,7 @@ class App extends React.Component {
     this.setState({
       searchInput: value,
     });
+    
   }
 
   render() {
@@ -65,7 +82,8 @@ class App extends React.Component {
         </header>
         {condition
           
-          ? <BrowserRouter>
+          ? 
+          <BrowserRouter>
           <Container>
             <nav>
               <h2>Navigate to a feature listed below</h2>
@@ -85,14 +103,18 @@ class App extends React.Component {
                     <Col>
                       <h2>{city.display_name}</h2>
                       <img src= {`https://maps.locationiq.com/v3/staticmap?key=${ACCESS_TOKEN}&center=${city.lat},${city.lon}&zoom=11&size=400x600`} alt={city.display_name} />
+                      
                     </Col>
                   ))}
                 </Row>
               } />
-              <Route path='/weather' element={<h2>Weather Component goes here</h2>} />
+              <Route path='/weather' element={
+              <Weather weather={this.state.weatherData}/>
+              } />
             </Routes>
             </Container>
           </BrowserRouter>
+          
           : <h2>Please Search for a city</h2>
         }
         {this.state.error
