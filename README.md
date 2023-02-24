@@ -33,3 +33,9 @@ Start time: 5:25pm
 Finish time: 7:30pm different day
 
 Actual time needed to complete: 9-10 hours
+
+
+
+Lab 7 WRRC
+
+![Lab 7 WRRC](301dclass07.png)

@@ -57,7 +57,6 @@ getWeather = async () => {
         console.log(response.data);
       });
 }
-   
 
   // async is just syntactic sugar, it just delays code like a callback
   handleInput = async (e) => {
