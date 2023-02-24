@@ -43,6 +43,7 @@ class App extends React.Component {
     }
   }
   
+  
   //    () =>
   // this.getWeather(this.state.handleData.display_name));
 getWeather = async () => {
