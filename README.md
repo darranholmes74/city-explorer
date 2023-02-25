@@ -24,6 +24,8 @@ In order to build the website I will need JS, CSS, HTML, React, React-Router-DOM
 
 
 
+Lab 7 
+
 Name of feature: City Explore
 
 Estimate of time needed to complete: 3 hours
@@ -35,7 +37,24 @@ Finish time: 7:30pm different day
 Actual time needed to complete: 9-10 hours
 
 
+Lab 8 
+Name of feature: Class 8
+Estimate of time needed to complete: 5hrs
+
+Start time: 
+
+Finish time: 
+
+Actual time needed to complete: 7 hours
+
+
 
 Lab 7 WRRC
 
 ![Lab 7 WRRC](301dclass07.png)
+
+Lab 8 WRRC
+
+![Lab 8 WRRC](301class8.png)
+
+Lab 9 WRRC

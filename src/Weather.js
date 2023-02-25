@@ -8,8 +8,8 @@ class Weather extends React.Component {
         return (
             <div>
                 
-                    {this.props.weather.map(items => (
-                  <div>
+                    {this.props.weather.map((items, idx) => (
+                  <div key={idx}>
                     <p>{items.data}</p>
                     <p>{items.description}</p>
                   </div>
