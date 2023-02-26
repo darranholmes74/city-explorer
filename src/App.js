@@ -53,7 +53,7 @@ class App extends React.Component {
   getMovies = async () => {
     try {
     let request ={
-      url: `http://localhost:3001/movie?cityName=${this.state.searchInput}`,
+      url: `https://city-explorer-api-oi37.onrender.com/movie?cityName=${this.state.searchInput}`,
       method: 'GET'
     }
     let response = await axios(request)
@@ -67,7 +67,7 @@ class App extends React.Component {
 
   getWeather = async () => {
     try {
-      let request = `http://localhost:3001/weather?city_name=${this.state.searchInput}`
+      let request = `https://city-explorer-api-oi37.onrender.com/weather?city_name=${this.state.searchInput}`
       console.log(request, "***")
       let response = await axios.get(request)
       this.setState({ weatherData: response.data })
