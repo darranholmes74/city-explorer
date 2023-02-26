@@ -14,7 +14,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from "./Weather"
 import Movie from "./Movie"
 
-
+// const SERVER_URL = process.env.EXPRESS_SERVER_URL
 const ACCESS_TOKEN = process.env.REACT_APP_LOCATION_ACCESS_TOKEN;
 
 class App extends React.Component {
