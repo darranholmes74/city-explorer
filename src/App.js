@@ -51,16 +51,17 @@ class App extends React.Component {
 
 
   getMovies = async () => {
-    //http://localhost:3001/movie?cityName=amman
+    try {
     let request ={
       url: `http://localhost:3001/movie?cityName=${this.state.searchInput}`,
       method: 'GET'
     }
-    axios(request)
-      .then(response => {
+    let response = await axios(request)
         this.setState({movieData: response.data})
         console.log(response.data);
-      })
+      }catch (e){
+        this.setState({error: e})
+      }
   }
 
 
